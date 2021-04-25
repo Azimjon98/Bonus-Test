@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion buildConfig.compileSdk
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "me.androiddev.bonustest"
+        minSdkVersion buildConfig.minSdk
+        targetSdkVersion buildConfig.targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        // Ignore any tests
+        ignoreTestSources true
+        // Make the build fail on any lint errors
+        abortOnError true
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(':core')
+    implementation project(':data')
+    implementation project(':ui-bonus')
+
+    implementation Libs.appCompat
+
+    implementation Libs.timber
+
+    implementation Libs.Kotlin.stdlib
+
+    implementation Libs.Coroutines.core
+    implementation Libs.Coroutines.android
+}

@@ -1,0 +1,5 @@
+include ':core'
+include ':data'
+include ':ui-bonus'
+include ':app'
+rootProject.name = "BonusTest"

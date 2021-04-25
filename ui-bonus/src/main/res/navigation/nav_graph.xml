@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/fragmentSplash">
+
+    <fragment
+        android:id="@+id/fragmentSplash"
+        android:name="me.androiddev.ui_bonus.FragmentSplash"
+        android:label="FragmentSplash"
+        tools:layout="@layout/window_splash">
+        <action
+            android:id="@+id/action_fragmentSplash_to_bonusFragment"
+            app:destination="@id/bonusFragment"
+            app:popUpTo="@id/fragmentSplash"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bonusFragment"
+        android:name="me.androiddev.ui_bonus.FragmentBonus"
+        android:label="BonusFragment"
+        tools:layout="@layout/window_bonus" />
+</navigation>

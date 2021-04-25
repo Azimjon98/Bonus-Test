@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_logo">ЛОГОТИП</string>
+    <string name="connectiong_to_server">Connectiong to server...</string>
+    <string name="format_quantity">%s бонусов</string>
+    <string name="format_burn_date">%s сгорит</string>
+    <string name="no_connection">No connection check network connection</string>
+</resources>
